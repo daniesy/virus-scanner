@@ -1,0 +1,31 @@
+{
+    "name": "daniesy/virus-scanner",
+    "description": "A simple and updated Virus Total wrapper for Laravel 5.5+",
+    "type": "laravel",
+    "require": {
+        "jayzeng/virustotalapi": "^0.1.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Danut Florian",
+            "email": "hello@danutflorian.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Daniesy\\VirusScanner\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Daniesy\\VirusScanner\\VirusScannerServiceProvider"
+            ],
+            "aliases": {
+                "VirusScanner": "Daniesy\\VirusScanner\\Facades\\VirusScanner"
+            }
+        }
+    }
+}
