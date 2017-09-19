@@ -34,7 +34,7 @@ The scan process can take some time because the files scanned through the Virus 
     echo $result->total; 	 // The total number of scans
     echo $result->positives; // The number of positive detections
     echo $result->permalink; // Url of the scan page
-    echo $result->scans; 	 // Array of results for each individual scan
+    var_dump($result->scans); 	 // Array of results for each individual scan
    
    
 ### Scan an url
