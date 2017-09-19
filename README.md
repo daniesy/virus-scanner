@@ -31,10 +31,10 @@ The scan process can take some time because the files scanned through the Virus 
     $scanner = (new VirusScanner)->scanFile('/path/to/file');
     $result = $scanner->checkResult();
     
-    echo $result->total; 	 // The total number of scans
-    echo $result->positives; // The number of positive detections
-    echo $result->permalink; // Url of the scan page
-    var_dump($result->scans); 	 // Array of results for each individual scan
+    echo $result->total;         // The total number of scans
+    echo $result->positives;     // The number of positive detections
+    echo $result->permalink;     // Url of the scan page
+    var_dump($result->scans);    // Array of results for each individual scan
    
    
 ### Scan an url
@@ -54,7 +54,7 @@ The scan process can take some time because the files scanned through the Virus 
     
 ### Check an ip
 
-	use VirusScanner;
+    use VirusScanner;
     
     $report = (new VirusScanner)->checkIp('192.168.1.1');
     var_dump($report);
