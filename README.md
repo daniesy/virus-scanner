@@ -20,46 +20,41 @@ Get starting in 3 easy steps:
 
 ## Usage
 
-**Laravel Virus Scanner** implements all the features offered by the [Virus Total Api](https://www.virustotal.com/en/documentation/public-api/#getting-url-scans). 
+**Laravel Virus Scanner** implements all the features offered by the [Virus Total Api](https://www.virustotal.com/en/documentation/public-api/#getting-url-scans).
 
 ### Scan a file
 
 The scan process can take some time because the files scanned through the Virus Total Api are handled with the lowest priority.
 
     use VirusScanner;
-    
-    $scanner = (new VirusScanner)->scanFile('/path/to/file');
+
+    $scanner = VirusScanner::scanFile('/path/to/file');
     $result = $scanner->checkResult();
-    
+
     echo $result->total;         // The total number of scans
     echo $result->positives;     // The number of positive detections
     echo $result->permalink;     // Url of the scan page
     var_dump($result->scans);    // Array of results for each individual scan
-   
-   
+
+
 ### Scan an url
 
     use VirusScanner;
-    
-    $scanner = (new VirusScanner)->scanUrl('http://url/to/file.exe');
+
+    $scanner = VirusScanner::scanUrl('http://url/to/file.exe');
     $result = $scanner->checkResult();
-    
+
 
 ### Check a domain
 
     use VirusScanner;
-    
-    $report = (new VirusScanner)->checkDomain("https://danutflorian.com");
+
+    $report = VirusScanner::checkDomain("https://danutflorian.com");
     var_dump($report);
-    
+
 ### Check an ip
 
     use VirusScanner;
-    
-    $report = (new VirusScanner)->checkIp('192.168.1.1');
+
+    $report = VirusScanner::checkIp('192.168.1.1');
     var_dump($report);
-    
-
-
-
-
